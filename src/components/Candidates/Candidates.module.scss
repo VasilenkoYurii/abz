@@ -1,0 +1,129 @@
+.heading,
+.candidates {
+   margin: 0 auto;
+}
+
+.candidates,
+.candidates__card {
+   display: flex;
+}
+
+.candidates {
+   width: 100%;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   margin-top: 50px;
+
+   &__card {
+      background: #ffffff;
+      flex-direction: column;
+      text-align: center;
+      justify-content: space-around;
+      min-width: 282px;
+      max-width: 370px;
+      width: -webkit-fill-available;
+      height: 254px;
+      border: none;
+      box-sizing: border-box;
+      border-radius: 14px;
+      padding: 20px;
+      margin: 0;
+      margin-bottom: 29px;
+   }
+
+   &__photo {
+      display: block;
+      width: 100%;
+      max-height: 70px;
+
+      img {
+         width: 70px;
+         height: 70px;
+         border-radius: 50%;
+      }
+   }
+
+   &__name {
+      margin: 20px auto;
+      white-space: nowrap;
+   }
+
+   &__description {
+      &_position,
+      &_email,
+      &_phone {
+         margin: 0 auto;
+         white-space: nowrap;
+      }
+   }
+}
+
+button.more {
+   margin-top: 21px;
+}
+
+.loadingElement {
+   transition: all 5s ease;
+}
+
+@media screen and (min-width: 320px) {
+   .candidates {
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+
+      &__card {
+         max-width: 282px;
+         margin-bottom: 0;
+      }
+   }
+
+   button.more {
+      margin-top: 30px;
+   }
+}
+
+@media screen and (min-width: 360px) {
+   .candidates {
+      &__card {
+         max-width: 328px;
+      }
+   }
+}
+
+@media screen and (min-width: 768px) {
+   .candidates {
+      gap: 16px;
+      margin-bottom: 15px;
+
+      &__card {
+         max-width: 344px;
+      }
+   }
+
+   button.more {
+      margin-top: 34px;
+   }
+}
+
+@media screen and (min-width: 1024px) {
+   .candidates {
+      gap: 29px;
+
+      &__card {
+         max-width: 282px;
+         margin-bottom: 0;
+      }
+   }
+}
+
+@media screen and (min-width: 1170px) {
+   .candidates {
+      max-width: 1170px;
+
+      &__card {
+         max-width: 370px;
+      }
+   }
+}
